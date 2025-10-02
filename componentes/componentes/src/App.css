@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.person {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 6px black;
+  margin: 20px 0 0 0;
+  background: linear-gradient(135deg, rgba(255, 72, 0, 0.651), rgba(255, 0, 0, 0.822));
+}
