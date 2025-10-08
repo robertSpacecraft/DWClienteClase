@@ -1,0 +1,11 @@
+.destacado {
+  color: red;
+  font-weight: bold;
+}
+
+.verde {
+  color: green;
+  font-family: Arial, Helvetica, sans-serif;
+  border: red 2px solid;
+}
+
