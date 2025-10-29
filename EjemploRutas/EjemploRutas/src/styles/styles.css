@@ -1,0 +1,172 @@
+/* ========================================================= */
+/* 1. RESET Y ESTILOS GLOBALES */
+/* ========================================================= */
+
+:root {
+    /* Paleta de Colores Profesional */
+    --color-primary: #007bff; /* Azul vibrante para acentos y enlaces */
+    --color-secondary: #6c757d; /* Gris para texto secundario */
+    --color-background: #f8f9fa; /* Fondo muy claro */
+    --color-surface: #ffffff; /* Fondo de contenedores (cards) */
+    --color-border: #dee2e6; /* Gris claro para bordes sutiles */
+    --color-success: #28a745; /* Verde para éxito/horas */
+    --color-text: #343a40; /* Texto principal oscuro */
+    
+    /* Sombras y Espaciado */
+    --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --spacing-md: 1.5rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.contenedor-portal {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ========================================================= */
+/* 2. BARRA DE NAVEGACIÓN Y PIE (FIJOS) */
+/* ========================================================= */
+
+.nav-bar {
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+    padding: 1rem var(--spacing-md);
+    display: flex;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 600;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    color: var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.footer {
+    background-color: var(--color-surface);
+    color: var(--color-secondary);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    border-top: 1px solid var(--color-border);
+    font-size: 0.9rem;
+}
+
+/* ========================================================= */
+/* 3. LAYOUT PRINCIPAL Y VISTAS */
+/* ========================================================= */
+
+/* Contenedor principal para las vistas */
+.dashboard-view, .mantenimiento-view, .modulos-layout, .error-404-view {
+    padding: var(--spacing-md);
+    flex-grow: 1;
+}
+
+h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+
+/* Estilos de la vista de Módulos (Layout anidado) */
+.modulos-layout {
+    display: flex;
+    gap: var(--spacing-md);
+    /* Desactivar el padding para que el aside ocupe todo el lateral */
+    padding: 0; 
+}
+
+.modulos-list {
+    flex: 0 0 250px; /* Ancho fijo para el menú lateral */
+    background-color: var(--color-surface);
+    padding: var(--spacing-md);
+    border-right: 1px solid var(--color-border);
+}
+
+.modulos-list h3 {
+    margin-top: 0;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.modulos-detalle {
+    flex-grow: 1;
+    padding: var(--spacing-md);
+}
+
+/* Lista de enlaces a módulos (en el sidebar) */
+.modulo-links {
+    /* list-style: none;  <-- SE ELIMINA porque <nav> no es un elemento de lista */
+    padding: 1rem 0 0 0;
+    display: flex; /* Añadimos flex-direction: column para que los enlaces se apilen verticalmente */
+    flex-direction: column;
+}
+
+.modulo-links a { /* Adaptado de .modulo-links li a */
+    display: block;
+    padding: 0.75rem 0;
+    text-decoration: none;
+    color: var(--color-text);
+    border-left: 3px solid transparent;
+    transition: background-color 0.2s ease, border-left-color 0.2s ease;
+}
+
+.modulo-links a:hover { /* Adaptado de .modulo-links li a:hover */
+    background-color: #e9ecef; /* Un gris muy suave */
+    border-left-color: var(--color-primary);
+    font-weight: 500;
+}
+
+/* Estilo para la tarjeta de detalles del módulo */
+.detalle-card {
+    background-color: var(--color-surface);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    border-left: 5px solid var(--color-primary);
+}
+
+.detalle-card h3 {
+    color: var(--color-primary);
+    border-bottom: 1px dashed var(--color-border);
+    margin-bottom: 1rem;
+}
+
+.detalle-card strong {
+    color: var(--color-text);
+}
+
+/* Estilo para la ruta de error 404 */
+.error-404-view {
+    background-color: #fcece9; /* Fondo rojo muy suave */
+    border: 1px solid #dc3545; /* Borde rojo */
+    color: #dc3545; /* Texto rojo */
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 8px;
+    max-width: 600px;
+}

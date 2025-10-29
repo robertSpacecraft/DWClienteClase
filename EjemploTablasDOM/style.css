@@ -1,0 +1,13 @@
+table {
+    margin-top: 2%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid brown;
+    padding: 6px 3px;
+}
+
+.rojo{
+    color: red;
+}
