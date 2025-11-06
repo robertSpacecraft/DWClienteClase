@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Catálogo de Videojuegos</title>
+</head>
+
+<body>
+    <div class="contenedorAPP">
+        <h1>Catálogo de Videojuegos</h1>
+        <section id="seccionAnadirJuego">
+            <h2>Añadir nuevo juego</h2>
+            <form id="formularioJuego" class="tarjeta-formulario">
+                <p>
+                    <label for="tituloEntrada">Título</label>
+                    <input type="text" id="tituloEntrada" name="titulo" required>
+                </p>
+
+                <p>
+                    <label for="selectorGenero">Género</label>
+                    <select name="genero" id="selectorGenero">
+                        <option value="">--Seleccione un género--</option>
+                        <option value="RPG">RPG</option>
+                        <option value="Acción">Acción</option>
+                        <option value="Estrategia">Estrategia</option>
+                        <option value="Simulación">Simulación</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="anioEntrada">Año de lanzamiento</label>
+                    <input type="number" id="anioEntrada" name="anio" required>
+                </p>
+
+                <button type="submit" id="botonAnadir">Añadir al catálogo</button>
+
+                <div id="divMensaje" class="mensaje mensaje-error">
+
+                </div>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="catalgo">
+            <h2>Catálogo</h2>
+            <div id="filtros">
+                <button class="boton-filtro activo" data-genero="all">Todos</button>
+                <button class="boton-filtro" data-genero="RPG">RPG</button>
+                <button class="boton-filtro" data-genero="Acción">Acción</button>
+                <button class="boton-filtro" data-genero="Estrategia">Estrategia</button>
+                <button class="boton-filtro" data-genero="Simulación">Simulación</button>
+            </div>
+            
+
+
+            <div id="listaJuegos" class="lista-juegos">
+
+            </div>
+        </section>
+    </div>
+    <script type="module" src="app.js"></script>
+
+</body>
+
+</html>
