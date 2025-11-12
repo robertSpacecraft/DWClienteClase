@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Gestion de Inscripciones a evento</title>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Inscripciones a Eventos</h1>
+    </header>
+    <main>
+        <section class="card">
+            <form id="formInscripcion">
+                <div class="grid">
+                    <div class="field">
+                        <label for="nombre">Nombre completo*</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Nombre y apellidos"/>
+                        <small class="error" id="errorNombre"></small>
+                    </div>
+                    <div class="field">
+                        <label for="correo">Correo Electrónico*</label>
+                        <input type="email" id="correo" name="correo" required placeholder="example@mail.com" pattern="[a-zA-Z0-9._%+\-]+@[A-Za-z0-9.-]+\.[a-zA-Z]{2,4}"/>
+                        <small class="error" id="errorCorreo"></small>
+                    </div>
+                      <div class="field">
+                        <label for="tipo">Tipo de entrada</label>
+                        <select name="tipo" id="tipo">
+                            <option value="General">General</option>
+                            <option value="VIP">VIP</option>
+                            <option value="Premium">Premium</option>
+                        </select>
+                    </div>
+                    </div>
+                      <div class="field checkbox">
+                        <label for="terminos">
+                            <input type="checkbox" name="terminos" id="terminos">
+                            Acepto los términos*
+                        </label>
+                        <small class="error" id="errorTerminos"></small>
+                    </div>
+                      </div>
+                      <div class="actions">
+                        <button type="submit">Inscribir</button>
+                        <button type="button" id="btnMostrar" class="secondary">Mostrar inscritos</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="table-wrapper">
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Tipo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyInscritos"></tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <h3>Desarrollo Web en Entorno Clientes</h3>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

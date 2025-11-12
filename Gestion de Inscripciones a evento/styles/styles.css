@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif;
+    margin: 0;
+    background: #0b1320;
+    color: #eef3ff
+}
+
+.app-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #1f2a44;
+    background: #0e1a2f
+}
+
+.app-header h1 {
+    margin: 0 0 6px;
+    font-size: 1.3rem
+}
+
+.hint {
+    opacity: .85;
+    margin: 0
+}
+
+main {
+    padding: 16px 20px
+}
+
+.card {
+    background: #0e1a2f;
+    border: 1px solid #22324f;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+.field input,
+.field select {
+    padding: 10px;
+    border: 1px solid #2a3b5f;
+    border-radius: 8px;
+    background: #091226;
+    color: #e8efff
+}
+
+.field input:focus,
+.field select:focus {
+    outline: 2px solid #2f6fed
+}
+
+.field.checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px
+}
+
+.error {
+    color: #ff7d7d;
+    min-height: 18px
+}
+
+.invalid {
+    border-color: #ff7d7d !important;
+    outline: 2px solid #b23b3b !important
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px
+}
+
+.actions button {
+    background: #2f6fed;
+    border: 1px solid #4b86ff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+.actions .secondary {
+    background: #23395b;
+    border-color: #3e5b8e
+}
+
+.actions .danger {
+    border-color: #a05555;
+    background: #6b1f1f
+}
+
+.table-wrapper {
+    overflow: auto;
+    border: 1px solid #22324f;
+    border-radius: 12px;
+    background: #0e1a2f
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.tabla th,
+.tabla td {
+    border-bottom: 1px solid #1e2b45;
+    padding: 10px 12px;
+    text-align: left
+}
+
+.tabla thead th {
+    position: sticky;
+    top: 0;
+    background: #15243f;
+    z-index: 1
+}
+
+.tabla button {
+    background: #23395b;
+    border: 1px solid #3e5b8e;
+    color: #e3ecff;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+.app-footer {
+    padding: 10px 20px;
+    border-top: 1px solid #1f2a44;
+    opacity: .8
+}
