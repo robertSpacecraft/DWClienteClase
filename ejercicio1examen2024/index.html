@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DWC — Ejercicio 1: Gestión de Productos</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Ejercicio 1 — Gestión de Productos</h1>
+  </header>
+  <section class="table-wrapper">
+    <table id="tablaProductos" class="tabla">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Precio (€)</th>
+          <th>Cantidad</th>
+          <th>Subtotal (€)</th>
+        </tr>
+      </thead>
+      <tbody id="tbodyProductos">
+        <!-- Filas generadas dinámicamente -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4" class="total-label">Total Productos</td>
+          <td id="totalGeneral" class="total-value">0,00</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <footer class="app-footer">
+    <p>Examen DWC 2024</p>
+  </footer>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
