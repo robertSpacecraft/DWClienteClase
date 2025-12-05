@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
     const location = useLocation();
-    const esRutaActiva = (ruta) => location.pathname === path;
+    const esRutaActiva = (path) => location.pathname === path;
     return (
         <nav className="navbar">
             <div className="navbar-brand">Seleciona un ejercicio:</div>
@@ -13,7 +13,7 @@ function Navbar() {
                 >Ejercicio 1
                 </Link>
                 <Link 
-                    to="/ejercicio1"
+                    to="/ejercicio2"
                     className={'navbar-link' + (esRutaActiva('/ejercicio2') ? 'navbar-link-active' : '')}
                 >Ejercicio 2
                 </Link>

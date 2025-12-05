@@ -1,7 +1,7 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import { Navbar } from './components/Navbar.jsx';
-import asignadorAsientos from './views/asignadorAsientos.jsx';
-import simuladorBateria from './views/simuladorBateria.jsx';
+import Navbar from './components/Navbar.jsx';
+import asignadorAsientos from './views/AsignadorAsientos.jsx';
+import simuladorBateria from './views/SimuladorBateria.jsx';
 
 function PaginaInicio() {
   return (
@@ -43,4 +43,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

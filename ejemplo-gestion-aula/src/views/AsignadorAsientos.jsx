@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 
 function AsignadorAsientos() {
@@ -88,7 +89,7 @@ function AsignadorAsientos() {
             <ul className="lista-asignaciones">
                  {asignaciones.length === 0 && <li className="lista-cacia">No hay asignaciones</li>}
 
-                 {asignaciones.map((asignacion) => {
+                 {asignaciones.map((asignacion) => (
                     <li key={asignacion.id}
                     className="asignacion-item"
                     onClick={() => manejarEliminarAsignacion(asignacion.id)}
@@ -97,7 +98,7 @@ function AsignadorAsientos() {
                         <span className="asignacion-flecha">-</span>
                         <span className="asignacion-asiento">asiento {asignacion.asiento}</span>
                     </li>
-                 })}
+                 ))}
             </ul>
         </div>
     );
