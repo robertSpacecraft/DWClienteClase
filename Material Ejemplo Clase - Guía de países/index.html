@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guía de países</title>
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Guía de países</h1>
+    <p>Ejemplo de programación asíncrona con fetch, módulos y DOM.</p>
+  </header>
+
+  <main class="main-layout">
+    <section class="filters">
+      <label for="search-country">Buscar país:</label>
+      <input
+        id="search-country"
+        type="text"
+        placeholder="Escribe el nombre del país..."
+      />
+
+      <label for="region-filter">Filtrar por región:</label>
+      <select id="region-filter">
+        <option value="">Todas las regiones</option>
+        <!-- Opciones dinámicas -->
+      </select>
+    </section>
+
+    <section id="country-list" class="country-list-container">
+      <!-- Lista de países -->
+    </section>
+
+    <section id="country-detail" class="country-detail-container">
+      <!-- Ficha de país -->
+    </section>
+  </main>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
