@@ -1,0 +1,40 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "title": "No compila el proyecto",
+      "category": "JavaScript",
+      "priority": "Alta",
+      "status": "En proceso",
+      "description": "Al ejecutar npm run dev me da error de import.",
+      "createdAt": "2026-01-04T09:15:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Fetch devuelve undefined",
+      "category": "React",
+      "priority": "Media",
+      "status": "En proceso",
+      "description": "No entiendo por qué mi await no devuelve datos.",
+      "createdAt": "2026-01-03T18:40:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "No se actualiza el estado",
+      "category": "React",
+      "priority": "Alta",
+      "status": "Abierto",
+      "description": "Cambio el estado pero no se repinta el componente.",
+      "createdAt": "2026-01-02T12:05:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "CSS no se aplica",
+      "category": "HTML/CSS",
+      "priority": "Baja",
+      "status": "Resuelto",
+      "description": "El archivo CSS está importado pero no se ven cambios.",
+      "createdAt": "2026-01-01T10:00:00.000Z"
+    }
+  ]
+}

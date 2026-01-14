@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Migración simulada</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1> Exportar datos locales a la nube (simulación de Firebase)</h1>
+
+      <section class="card">
+        <h2>Datos locales</h2>
+        <button id="seedBtn" type="button">Crear datos de ejemplo</button>
+        <button id="showLocalBtn" type="button">Ver local</button>
+        <pre id="localOut"></pre>
+      </section>
+
+      <section class="card">
+        <h2>Migración</h2>
+        <button id="migrateBtn" type="button">Migrar a la nube</button>
+        <button id="showCloudBtn" type="button">Ver nube</button>
+        <p id="status"></p>
+        <pre id="cloudOut"></pre>
+      </section>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
