@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ideas compartidas (Firestore)</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Ideas compartidas (Firestore + onSnapshot)</h1>
+      <p class="hint">
+        Abre esta misma página en dos ordenadores/pestañas: verás la sincronización en tiempo real.
+      </p>
+
+      <section class="card">
+        <h2>Añadir idea</h2>
+        <form id="ideaForm">
+          <input
+            id="ideaInput"
+            type="text"
+            placeholder="Escribe una idea..."
+            required
+            minlength="2"
+            autocomplete="off"
+          />
+          <button type="submit">Añadir</button>
+        </form>
+        <p id="msg" class="msg"></p>
+      </section>
+
+      <section class="card">
+        <h2>Lista en tiempo real</h2>
+        <ul id="list" class="list"></ul>
+      </section>
+    </main>
+
+    <!-- OJO: módulos -->
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
