@@ -1,0 +1,262 @@
+/* styles.css
+   Estilo limpio y “pro” para la práctica del Mini-gimnasio
+   Usa variables, cards, botones modernos, tabla con buen look y responsive.
+*/
+
+:root{
+  --bg: #0b1220;
+  --panel: rgba(255,255,255,0.06);
+  --panel-strong: rgba(255,255,255,0.10);
+  --border: rgba(255,255,255,0.12);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.70);
+  --muted-2: rgba(255,255,255,0.55);
+  --accent: #7c5cff;
+  --accent-2: #28d8a5;
+  --danger: #ff5c7a;
+
+  --radius: 16px;
+  --shadow: 0 18px 50px rgba(0,0,0,0.35);
+  --shadow-soft: 0 10px 25px rgba(0,0,0,0.22);
+
+  --container: 1050px;
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+
+body{
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text);
+  background:
+    radial-gradient(1200px 800px at 15% 10%, rgba(124,92,255,0.35), transparent 60%),
+    radial-gradient(900px 700px at 85% 15%, rgba(40,216,165,0.25), transparent 60%),
+    radial-gradient(700px 500px at 35% 85%, rgba(255,92,122,0.15), transparent 60%),
+    linear-gradient(180deg, #060b16 0%, var(--bg) 100%);
+}
+
+a{ color: inherit; }
+::selection{ background: rgba(124,92,255,0.35); }
+
+h1{
+  margin: 0 0 14px 0;
+  font-size: clamp(24px, 3vw, 34px);
+  letter-spacing: -0.02em;
+}
+
+h2{
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: rgba(255,255,255,0.90);
+}
+
+p{ margin: 0; color: var(--muted); }
+
+body > h1,
+body > div,
+#salida{
+  width: min(var(--container), calc(100% - 32px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* “Header” visual sin tocar HTML: decoramos el primer h1 */
+body > h1{
+  padding: 18px 18px 12px;
+  margin-top: 16px;
+  background: linear-gradient(135deg, rgba(124,92,255,0.16), rgba(40,216,165,0.10));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Contenedor de botones */
+body > div{
+  margin-top: 12px;
+  padding: 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Botones */
+button{
+  appearance: none;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: transform .08s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+button:hover{
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.24);
+  transform: translateY(-1px);
+}
+
+button:active{
+  transform: translateY(0);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.16);
+}
+
+button:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(124,92,255,0.35), 0 8px 18px rgba(0,0,0,0.18);
+}
+
+/* Hacemos el primer botón “principal” visualmente */
+#btnInforme{
+  background: linear-gradient(135deg, rgba(124,92,255,0.95), rgba(124,92,255,0.65));
+  border-color: rgba(124,92,255,0.55);
+}
+#btnInforme:hover{
+  background: linear-gradient(135deg, rgba(124,92,255,1), rgba(124,92,255,0.75));
+}
+
+/* Botones secundarios con acento suave */
+#btnOrdenEdadAsc{
+  background: linear-gradient(135deg, rgba(40,216,165,0.28), rgba(255,255,255,0.08));
+  border-color: rgba(40,216,165,0.25);
+}
+#btnOrdenCuotaDesc{
+  background: linear-gradient(135deg, rgba(124,92,255,0.22), rgba(255,255,255,0.08));
+  border-color: rgba(124,92,255,0.25);
+}
+
+/* Área de salida como “card” grande */
+#salida{
+  margin-top: 14px;
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Párrafo resumen (el primer <p> que metes desde JS) */
+#salida > p{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 8px;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 14px;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 14px;
+}
+
+#salida > p strong{
+  color: rgba(255,255,255,0.95);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Pills */
+.pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.86);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Tarjetas de secciones (sin tocar HTML): aplicamos a cada bloque h2 + tabla */
+#salida h2{
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+/* Tablas */
+table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.14);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.20);
+}
+
+thead th{
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.80);
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  padding: 12px;
+}
+
+tbody td{
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.86);
+}
+
+tbody tr:hover td{
+  background: rgba(255,255,255,0.04);
+}
+
+tbody tr:last-child td{
+  border-bottom: none;
+}
+
+/* “Chips” suaves si algún día usas etiquetas dentro de celdas */
+.badge{
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.86);
+}
+
+/* Scroll horizontal en móviles */
+@media (max-width: 720px){
+  body > div{
+    padding: 12px;
+  }
+
+  #salida{
+    padding: 12px;
+  }
+
+  table{
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  thead th, tbody td{
+    white-space: nowrap;
+  }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce){
+  *{ transition: none !important; }
+}
